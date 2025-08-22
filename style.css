@@ -55,6 +55,7 @@ body {
 /* summary */
 .expenses-summary-container {
   display: grid;
+  gap: var(--size-3);
   color: hsl(var(--brown-400));
   border-radius: var(--size-3);
   background-color: hsl(var(--white));
@@ -66,7 +67,7 @@ body {
 }
 .expenses-chart-days {
   display: flex;
-  gap: 10px;
+  gap: var(--font-size-px-2);
   justify-content: space-between;
   align-items: end;
   font-size: var(--font-size-0);
@@ -109,6 +110,12 @@ body {
   color: hsl(var(--brown-950));
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-7);
+}
+.seperator {
+  background-color: hsl(var(--red-100));
+  justify-self: center;
+  height: 3px;
+  width: 90%;
 }
 .expenses-summary {
   display: flex;
