@@ -1,0 +1,143 @@
+@import "https://unpkg.com/open-props";
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --red-500: 10 79% 65%;
+  --blue-300: 186 34% 65%;
+
+  /* ### Neutral */
+  --white: 0 0% 100%;
+  --brown-950: 25 47% 15%;
+  --brown-400: 28 10% 53%;
+  --red-100: 26 66% 93%;
+  --font-size-px-35: 18px;
+}
+@font-face {
+  font-family: "DM-Sans";
+  src: url(fonts/DMSans-VariableFont.ttf);
+}
+body {
+  font-family: "DM-Sans";
+  font-size: var(--font-size-px-35);
+  display: grid;
+  place-items: center;
+  background-color: hsl(var(--red-100));
+  height: 100vh;
+  margin-top: var(--size-7);
+}
+
+.expenses-container {
+  display: grid;
+  grid-template-columns: minmax(330px, 418px);
+  align-content: start;
+  padding: var(--size-3);
+  gap: var(--size-2);
+}
+/* header */
+.expenses-header {
+  color: hsl(var(--red-100));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-3);
+  background-color: hsl(var(--red-500));
+  border-radius: var(--radius-2);
+}
+.expenses-title {
+  font-size: var(--font-size-1);
+}
+.expenses-amount {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-7);
+}
+/* summary */
+.expenses-summary-container {
+  display: grid;
+  color: hsl(var(--brown-400));
+  border-radius: var(--size-3);
+  background-color: hsl(var(--white));
+}
+.expenses-chart {
+  display: grid;
+  gap: 2rem;
+  padding: var(--size-3);
+}
+.expenses-chart-days {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: end;
+  font-size: var(--font-size-0);
+}
+.expenses-chart-day {
+  min-width: 4ch;
+  max-width: 40px;
+  width: 8vw;
+  text-align: center;
+}
+.expenses-chart-amount {
+  position: relative;
+  background-color: hsl(var(--red-500));
+  border-radius: var(--radius-2);
+}
+.expenses-chart-amount:hover {
+  cursor: pointer;
+  filter: brightness(115%);
+}
+.bg-blue {
+  background-color: hsl(var(--blue-300));
+}
+.expenses-chart-amount-display {
+  display: none;
+  position: absolute;
+  top: -32px;
+  left: -7px;
+  padding: var(--size-1);
+  width: var(--size-0000);
+  line-height: var(--size-4);
+  border-radius: var(--radius-2);
+  color: hsl(var(--white));
+  background-color: hsl(var(--brown-950));
+  text-align: center;
+}
+.expenses-chart-amount:hover > .expenses-chart-amount-display {
+  display: block;
+}
+.expenses-chart-title {
+  color: hsl(var(--brown-950));
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-7);
+}
+.expenses-summary {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: var(--size-3);
+}
+.expenses-summary-title {
+  font-size: var(--font-size-1);
+}
+.expenses-summary-amount {
+  color: hsl(var(--brown-950));
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-7);
+}
+.expenses-summary-percentage {
+  display: grid;
+  justify-items: end;
+}
+.expenses-summary-change {
+  color: hsl(var(--brown-950));
+  font-weight: var(--font-weight-7);
+}
+
+/* ### Attribution */
+.attribution {
+  font-size: var(--font-size-0);
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

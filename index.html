@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="expenses-container">
+      <div class="expenses-header">
+        <div class="expenses-header-content">
+          <div class="expenses-title">My balance</div>
+          <div class="expenses-amount">$921.48</div>
+        </div>
+        <div class="expenses-header-logo">
+          <img src="images/logo.svg" alt="Logo" width="50px" />
+        </div>
+      </div>
+      <div class="expenses-summary-container">
+        <div class="expenses-chart">
+          <div class="expenses-chart-title">Spending - Last 7 days</div>
+          <div id="expenses-chart" class="expenses-chart-days"></div>
+        </div>
+        <div class="expenses-summary">
+          <div class="expenses-summary-total">
+            <div class="expenses-summary-title">Total this month</div>
+            <div class="expenses-summary-amount">$478.33</div>
+          </div>
+          <div class="expenses-summary-percentage">
+            <div class="expenses-summary-change">+2.4%</div>
+            <div class="expenses-summary-comparison">from last month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Stephen Petersen</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
